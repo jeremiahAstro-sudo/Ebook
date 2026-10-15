@@ -1,0 +1,29 @@
+/* Minimal CSS for Greenleaf Library — styles.css
+   This is intentionally small but readable. Add or replace with original styles if you have them.
+*/
+:root{--bg:#f6f4ec;--accent:#2b6a4a;--muted:#6b6b6b;--card:#ffffff}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+body{background:var(--bg);color:#111}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:linear-gradient(90deg,rgba(255,255,255,.6),transparent)}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.hero{display:flex;gap:2rem;padding:2rem}
+.hero-copy{max-width:48rem}
+.button{display:inline-block;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+.button-dark{background:var(--accent);color:#fff}
+.catalog-section{padding:1.5rem 2rem}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.book-card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 0 rgba(0,0,0,.04);cursor:pointer}
+.book-title{font-weight:600;margin:0 0 .25rem}
+.book-author{color:var(--muted);font-size:.9rem;margin:0}
+.empty-state{padding:2rem;text-align:center;background:transparent}
+.reader-body .reader-header,.admin-body .site-header{padding:.8rem 1.2rem}
+.reader-layout{display:flex}
+.toc-panel{width:260px;padding:1rem;border-right:1px solid rgba(0,0,0,.06);background:rgba(255,255,255,.7)}
+.reader-main{flex:1;padding:1rem}
+.chapter-article{background:var(--card);padding:1rem;border-radius:8px}
+.chapter-text p{line-height:1.6}
+.watermark-layer{position:absolute;inset:0;pointer-events:none;color:rgba(0,0,0,.05);font-size:24px;display:flex;flex-wrap:wrap;align-content:flex-start;padding:2rem}
+.toolbar-group{display:inline-flex;gap:.5rem}
+.hidden{display:none}
+@media(max-width:800px){.hero{flex-direction:column}.toc-panel{display:none}}
