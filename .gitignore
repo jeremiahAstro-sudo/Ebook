@@ -1,0 +1,4 @@
+# Never commit source manuscripts unless you intentionally want them public.
+*.pdf
+*.docx
+.DS_Store

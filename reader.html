@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f4ec"><title>Reader — Greenleaf Library</title><link rel="stylesheet" href="css/styles.css"></head>
+<body class="reader-body">
+<header class="reader-header"><a class="brand" href="index.html"><span class="brand-mark">✿</span><span>greenleaf<span class="brand-light"> library</span></span></a><div class="reader-top-actions"><a class="text-link" href="index.html">← Library</a><button id="openContents" class="icon-button" aria-label="Open table of contents">☷</button></div></header>
+<main class="reader-layout">
+  <aside id="tocPanel" class="toc-panel"><div class="toc-heading"><span class="eyebrow">IN THIS BOOK</span><button id="closeContents" class="icon-button" aria-label="Close table of contents">×</button></div><h3 id="tocBookTitle">Book contents</h3><div id="tocList"></div></aside>
+  <section class="reader-main">
+    <div id="readerGate" class="gate-card">
+      <span class="gate-icon">✿</span><p class="eyebrow">YOUR READING PASS</p><h1>Welcome, reader.</h1><p class="muted">Enter your username and access token to open this book.</p>
+      <form id="accessForm" class="stack-form"><label>Username<input id="readerUsername" autocomplete="nickname" required maxlength="48" placeholder="The name on your reading pass"></label><label>Access token<input id="readerToken" required autocomplete="off" placeholder="Enter your token"></label><button class="button button-dark" type="submit">Open my book <span>→</span></button><p id="gateError" class="form-error" role="alert"></p></form>
+      <p class="fine-print">Your username appears in the reading watermark. This static version checks codes in this browser and is not tamper-proof.</p>
+    </div>
+    <div id="readerContent" class="hidden">
+      <div class="reader-toolbar">
+        <div class="toolbar-group"><button id="prevChapter" class="tool-button" title="Previous chapter">←</button><span id="chapterCounter" class="chapter-counter">Chapter 1</span><button id="nextChapter" class="tool-button" title="Next chapter">→</button></div>
+        <div class="toolbar-group"><button id="fontDown" class="tool-button" title="Smaller text">A−</button><button id="fontUp" class="tool-button" title="Larger text">A+</button><button id="themeToggle" class="tool-button" title="Toggle warm/dark theme">◐</button><button id="bookmarkButton" class="tool-button" title="Bookmark this chapter">♧</button></div>
+      </div>
+      <div class="reading-progress"><span id="progressBar"></span></div>
+      <div class="reader-book-meta"><span id="readerCategory" class="eyebrow"></span><span id="readerExpiry" class="expiry-label"></span></div>
+      <article id="chapterArticle" class="chapter-article">
+        <div id="watermarkLayer" class="watermark-layer" aria-hidden="true"></div>
+        <div id="chapterText" class="chapter-text"></div>
+      </article>
+      <div class="chapter-navigation"><button id="prevBottom" class="button button-light">← Previous</button><button id="nextBottom" class="button button-dark">Next chapter →</button></div>
+      <section class="comments-panel"><div><p class="eyebrow">A NOTE TO YOURSELF</p><h3>Personal reading notes</h3><p class="muted">These notes stay in this browser on this device. They are not shared with other readers.</p></div><textarea id="personalNote" rows="4" placeholder="What stood out to you in this chapter?"></textarea><button id="saveNote" class="button button-light">Save private note</button><span id="noteStatus" class="muted small"></span></section>
+    </div>
+  </section>
+</main>
+<footer><a class="brand brand-footer" href="index.html">✿ greenleaf library</a><span>Read thoughtfully. Live well.</span></footer>
+<script src="data/library.js"></script><script src="js/store.js"></script><script src="js/reader.js"></script></body></html>

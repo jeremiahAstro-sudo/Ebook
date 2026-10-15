@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f4ec">
+  <title>Greenleaf Library — A quieter way to read</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">✿</span><span>greenleaf<span class="brand-light"> library</span></span></a>
+    <nav><a href="#catalog">Library</a><a href="admin.html" class="nav-admin">Admin</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A little space to grow</p>
+        <h1>Good reads for a <em>healthier life.</em></h1>
+        <p class="hero-sub">A thoughtful collection of books on food, wellbeing and living well — one chapter at a time.</p>
+        <a class="button button-dark" href="#catalog">Explore the library <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Botanical illustration">
+        <div class="sun"></div><div class="plant plant-one"><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="plant plant-two"><i></i><i></i><i></i><b></b></div>
+        <div class="book-stack"><span></span><span></span><span></span></div>
+        <div class="art-label">READ · LEARN · FLOURISH</div>
+      </div>
+    </section>
+    <section id="catalog" class="catalog-section">
+      <div class="section-heading"><div><p class="eyebrow">Your reading shelf</p><h2>Explore the collection</h2></div><div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search books…" aria-label="Search books"></div></div>
+      <div id="categoryFilters" class="filters"></div>
+      <div id="bookGrid" class="book-grid"></div>
+      <div id="emptyState" class="empty-state hidden"><span>☘</span><h3>Your shelf is ready to grow</h3><p>No books match this search yet. Try another title or category.</p><a href="admin.html">Open the admin workspace →</a></div>
+    </section>
+    <section class="quote-band"><span class="quote-leaf">✳</span><p>“Small choices, made with care, can change the way we feel every day.”</p><span class="quote-caption">A NOTE FROM THE GREENLEAF SHELF</span></section>
+  </main>
+  <footer><a class="brand brand-footer" href="index.html">✿ greenleaf library</a><span>Read thoughtfully. Live well.</span></footer>
+  <script src="data/library.js"></script><script src="js/store.js"></script><script src="js/catalog.js"></script>
+</body></html>
